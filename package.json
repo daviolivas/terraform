@@ -4,8 +4,9 @@
   "description": "Just a simple node app to learn Terraform and cloud.",
   "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsx --watch src/index.ts"
+    "dev": "tsx --watch src/index.ts",
+    "build": "npx tsc",
+    "preview": "node build/index.js"
   },
   "author": "Davi Oliveira",
   "license": "ISC",

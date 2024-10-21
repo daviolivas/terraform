@@ -1,0 +1,6 @@
+services:
+  server:
+    image: node-server
+    container_name: node-server
+    ports:
+      - "3000:3000"
