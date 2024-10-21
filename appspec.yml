@@ -1,0 +1,22 @@
+version: 0.0
+os: linux
+
+source: /
+files:
+  - source: /
+    destination: /home/ubuntu/<repo-name>
+  - permissions:
+      object: /home/ubuntu/<repo-name>
+      owner: ubuntu
+      group: ubuntu
+
+hooks:
+  AfterInstall:
+    location: codedeploy-scripts/set-permissions
+    timeout: 300   
+
+  ApplicationStart:
+    runas: root
+    location: codedeploy-scripts/start_server
+    timeout: 300
+    runas: ubuntu
