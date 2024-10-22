@@ -1,2 +1,3 @@
 #!/bin/bash
-touch olaVimDoGit.txt
+cd /home/ec2-user/app/
+touch daleVimDoVss.txt
